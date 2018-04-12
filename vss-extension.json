@@ -1,0 +1,132 @@
+{
+  "manifestVersion": 1,
+  "id": "qualitygatewidget",
+  "version": "0.1.0",
+  "name": "Quality Gate Widget",
+  "scopes": ["vso.work"],
+  "description": "Widget to show the SonarQube Quality Gate status for a project",
+  "publisher": "yuriburgernet",
+  "galleryFlags": [
+    "Preview"
+  ],
+  "icons": {
+    "default": "static/images/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "demands": [
+    "api-version/3.0"
+  ],
+  "tags": [
+    "Sample"
+  ],
+  "screenshots": [
+    {
+      "path": "static/images/screen1.png"
+    }
+  ],
+  "content": {
+    "license": {
+      "path": "license.md"
+    },
+    "details": {
+      "path": "overview.md"
+    }
+  },
+  "links": {
+    "getstarted": {
+      "uri": "https://github.com/yuriburger/quality-gate-widget"
+    },
+    "support": {
+      "uri": "https://github.com/yuriburger/quality-gate-widget/issues"
+    },
+    "issues": {
+      "uri": "https://github.com/yuriburger/quality-gate-widget/issues"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/yuriburger/quality-gate-widget"
+  },
+  "branding": {
+    "color": "rgb(220, 235, 252)",
+    "theme": "light"
+  },
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    },
+    {
+      "path": "static/images/logo.png",
+      "addressable": true
+    },
+    {
+      "path": "static/css/app.css",
+      "addressable": true
+    },
+    {
+      "path": "static/index.html",
+      "addressable": true
+    },
+     {
+      "path": "static/configuration.html",
+      "addressable": true
+    },
+    {
+      "path": "node_modules/vss-web-extension-sdk/lib",
+      "addressable": true,
+      "packagePath": "lib"
+    }
+    
+  ],
+  "categories": [
+    "Integrate"
+  ],
+  "contributions": [
+    {
+      "id": "QualityGateWidget",
+      "type": "ms.vss-dashboards-web.widget",
+      "targets": [
+        "ms.vss-dashboards-web.widget-catalog",
+        ".QualityGateWidget-Configuration"
+      ],
+      "properties": {
+        "name": "Quality Gate Widget",
+        "description": "Widget to show the SonarQube Quality Gate status",
+        "uri": "static/index.html",
+        "isNameConfigurable": true,
+        "catalogIconUrl:": "static/images/logo.png",
+        "previewImageUrl": "static/images/logo.png",
+        "supportedSizes": [
+          {
+            "rowSpan": 1,
+            "columnSpan": 2
+          },
+          {
+            "rowSpan": 2,
+            "columnSpan": 2
+          }
+        ],
+        "supportedScopes": [
+          "project_team"
+        ]
+      }
+    },
+    {
+      "id": "QualityGateWidget-Configuration",
+      "type": "ms.vss-dashboards-web.widget-configuration",
+      "targets": [
+        "ms.vss-dashboards-web.widget-configuration"
+      ],
+      "properties": {
+        "name": "Quality Gate Widget Configuration",
+        "description": "Widget to show the SonarQube Quality Gate status.",
+        "uri": "static/configuration.html"
+      }
+    }
+  ]
+}
