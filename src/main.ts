@@ -32,8 +32,7 @@
                         });
                 };
                 return {
-                    load: function (widgetSettings){
-
+                    load: function (widgetSettings) {
                         // Set your title
                         const $title = $("h2.title");
                         $title.text(widgetSettings.name);
