@@ -1,1 +1,1 @@
-# SonarQube Quality Gate Widget for VSTS
+# SonarQube Quality Gate Dashboard Widget for VSTS

@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "qualitygatewidget",
-  "version": "0.1.1",
+  "version": "0.1.26",
   "name": "Quality Gate Widget",
   "scopes": ["vso.work"],
   "description": "Widget to show the SonarQube Quality Gate status for a project",
@@ -104,10 +104,10 @@
         "supportedSizes": [
           {
             "rowSpan": 1,
-            "columnSpan": 2
+            "columnSpan": 1
           },
           {
-            "rowSpan": 2,
+            "rowSpan": 1,
             "columnSpan": 2
           }
         ],

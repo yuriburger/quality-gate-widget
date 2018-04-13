@@ -7,15 +7,21 @@
 
 <body>
     <div class="widget-configuration">
-        <div class="dropdown" id="query-path-dropdown">
-            <label class="label">Query: </label>
-            <div class="wrapper">
-                <select id="query-path">						
-						<option value="Shared Queries/Feedback">Shared Queries/Feedback</option>
-						<option value="Shared Queries/Current Sprint/Work in Progress">Shared Queries/Current Sprint/Work in Progress</option>
-						<option value="Shared Queries/Current Sprint/Test Cases">hared Queries/Current Sprint/Test Cases</option>											
-					</select>
-            </div>
+        <div id="project-picker">
+            <fieldset>
+                <label class="config-label">Project Key</label>
+                <div class="wrapper">
+                    <input id="project-picker-input" class="input-text-box field">
+                </div>
+            </fieldset>
+        </div>
+        <div id="sonar-url">
+            <fieldset>
+                <label class="config-label">Sonar URL</label>
+                <div class="wrapper">
+                    <input id="sonar-url-input" class="input-text-box field">
+                </div>
+            </fieldset>
         </div>
     </div>
     <script src="../lib/VSS.SDK.min.js"></script>
