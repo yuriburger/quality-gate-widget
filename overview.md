@@ -13,10 +13,9 @@ Widget to show the SonarQube Quality Gate status for a project
 
 3. Enter a title, a SonarQube project key and the URL for your SonarQube server
 
-
+![](static/images/Screen3.png)
 
 4. Add and arrange one or more of the widgets on your dashboard.
-
 
 ### Known issue(s)
 
