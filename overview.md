@@ -2,14 +2,14 @@
 
 Widget to show the SonarQube Quality Gate status for a project
 
-![](/static/images/Screen1.png)
+![](static/images/Screen1.png)
 
 ### Quick steps to get started ###
 
 1. Edit your dashboard
 2. Select the Quality Gate Widget
 
-![](/static/images/Screen1.png)
+![](static/images/Screen2.png)
 
 3. Enter a title, a SonarQube project key and the URL for your SonarQube server
 
@@ -31,8 +31,6 @@ The [source](https://github.com/yuriburger/quality-gate-widget) to this extensio
 
 - Visual Studio Team Services
 
-### Contributors ###
-
 ### Feedback ###
-- Add a review below.
+- Add a review here.
 - File any issues on GitHub [issues](https://github.com/yuriburger/quality-gate-widget/issues).
