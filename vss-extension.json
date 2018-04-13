@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "qualitygatewidget",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "name": "Quality Gate Widget",
   "scopes": ["vso.work"],
   "description": "Widget to show the SonarQube Quality Gate status for a project",
@@ -20,8 +20,8 @@
   "demands": [
     "api-version/3.0"
   ],
-  "tags": [
-    "Sample"
+  "tags":  [
+    "build", "quality gate", "code quality", "static code analysis"
   ],
   "screenshots": [
     {
@@ -84,7 +84,7 @@
     
   ],
   "categories": [
-    "Integrate"
+    "Build and release"
   ],
   "contributions": [
     {
