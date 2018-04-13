@@ -2,22 +2,30 @@
 
 Widget to show the SonarQube Quality Gate status for a project
 
+![](/static/images/Screen1.png)
+
 ### Quick steps to get started ###
+
+1. Edit your dashboard
+2. Select the Quality Gate Widget
 
 ![](/static/images/Screen1.png)
 
-//TODO:Add a walk-through of key features to your extension. See [Roll-up Board](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.RollUpBoard) for an example.
+3. Enter a title, a SonarQube project key and the URL for your SonarQube server
+
+
+
+4. Add and arrange one or more of the widgets on your dashboard.
+
 
 ### Known issue(s)
 
-- None
+- You need to provide the full url for your SonarQube Api. 
+Example: https://localhost/api/qualitygates/project_status?projectKey=
 
 ### Learn More
 
-The [source](//TODO:Point to your repo or remove this) to this extension is available. Feel free to take, fork, and extend.
-
-//TODO:Update the 3rd party notices file or remove the view notices reference.
-[View Notices](https://marketplace.visualstudio.com/_apis/public/gallery/publisher/yuriburgernet/extension/qualitygatewidget/latest/assetbyname/ThirdPartyNotices.txt) for third party software included in this extension.
+The [source](https://github.com/yuriburger/quality-gate-widget) to this extension is available. Feel free to take, fork, and extend.
 
 ### Minimum supported environments ###
 
@@ -25,8 +33,6 @@ The [source](//TODO:Point to your repo or remove this) to this extension is avai
 
 ### Contributors ###
 
-We thank the following contributor(s) for this extension: @TODO@-Add and credit contributors.
-
 ### Feedback ###
 - Add a review below.
-- Send us an [email](mailto://TODO:Add your email address).
+- File any issues on GitHub [issues](https://github.com/yuriburger/quality-gate-widget/issues).

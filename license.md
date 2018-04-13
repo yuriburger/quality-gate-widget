@@ -1,6 +1,6 @@
 Quality Gate Widget
 
-Copyright (c) //TODO:Add owners name
+Copyright (c) yuriburger.net
 
 All rights reserved.
 
