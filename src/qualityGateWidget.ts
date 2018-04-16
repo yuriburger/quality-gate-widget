@@ -22,27 +22,27 @@ export class QualityGateWidget {
             $container.text("Sorry nothing to show, please configure the settings");
             return this.WidgetHelpers.WidgetStatusHelper.Success();
         }
-        $.getJSON( settings.sonarUrl + settings.projectKey, (data) => {
-            const $span = $("<div>");
 
-            if (data.projectStatus.status === "OK") {
-                $span.text("passed");
-                $span.addClass("level levelOk");
-            }
-            else {
-                $span.text("failed");
-                $span.addClass("level levelFailed");
-            }
+        try {
+            return $.getJSON( settings.sonarUrl + settings.projectKey, (data) => {
+                const $span = $("<div>");
+                if (data.projectStatus.status === "OK") {
+                    $span.text("passed");
+                    $span.addClass("level levelOk");
+                }
+                else {
+                    $span.text("failed");
+                    $span.addClass("level levelFailed");
+                }
+                const $container = $("#quality-info-container");
+                $container.empty();
+                $container.append($span);
+                return this.WidgetHelpers.WidgetStatusHelper.Success();
+            });
 
-            const $container = $("#quality-info-container");
-            $container.empty();
-            $container.append($span);
-
-            return this.WidgetHelpers.WidgetStatusHelper.Success();
-        })
-        .fail(function(error) {
-            console.log(error);
-            return this.WidgetHelpers.WidgetStatusHelper.Failure("Error occurred");
-        });
+        } catch (e) {
+            // Telemetry
+            console.log(e);
+        }
     }
 }
