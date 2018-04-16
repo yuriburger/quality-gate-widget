@@ -1,7 +1,7 @@
 {
   "scripts": {
     "build": "npm run lint && npm run clean && npm run webpack",
-    "webpack" : "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
+    "webpack": "webpack --progress --colors --config webpack.config.js --output-path ./dist -p",
     "postbuild": "npm run package",
     "package": "tfx extension create  --rev-version",
     "gallery-publish": "tfx extension publish --rev-version",
@@ -9,20 +9,25 @@
     "lint": "tslint -c tslint.json 'src/*.ts'"
   },
   "devDependencies": {
+    "@types/jasmine": "^2.8.6",
+    "cpx": "^1.5.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-typescript": "^3.0.12",
     "rimraf": "^2.6.1",
     "tfx-cli": "^0.4.5",
-    "typescript": "2.3.4",
-    "cpx": "^1.5.0",
     "ts-loader": "^2.0.0",
     "tslint": "^5.2.0",
     "tslint-loader": "^3.5.3",
+    "typescript": "2.3.4",
     "webpack": "^2.5.1"
   },
   "dependencies": {
     "@types/jquery": "^2.0.34",
     "@types/q": "0.0.32",
     "vss-web-extension-sdk": "^2.117.0"
-    
   },
   "name": "vstsextwidget",
   "private": true,
