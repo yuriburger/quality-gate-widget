@@ -41,7 +41,6 @@ export class QualityGateWidget {
             });
 
         } catch (e) {
-            // Telemetry
             console.log(e);
         }
     }
