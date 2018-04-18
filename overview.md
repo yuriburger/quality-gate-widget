@@ -2,8 +2,6 @@
 
 Widget to show the SonarQube Quality Gate status for a project
 
-![](/static/images/Screen1.png)
-
 ### Quick steps to get started ###
 
 1. Edit your dashboard
@@ -26,12 +24,12 @@ Example: https://localhost/api/qualitygates/project_status?projectKey=
 
 ### Learn More
 
-The [source](https://github.com/yuriburger/quality-gate-widget) to this extension is available. Feel free to take, fork, and extend.
+The [source](https://github.com/yuriburger/quality-gate-widget) to this extension is available. Feel free to take, fork, and improve!
 
 ### Minimum supported environments ###
 
 - Visual Studio Team Services
 
 ### Feedback ###
-- Add a review here.
-- File any issues on GitHub [issues](https://github.com/yuriburger/quality-gate-widget/issues).
+- Feedback welcome: add a review here or ....
+- .... file any issues on GitHub [issues](https://github.com/yuriburger/quality-gate-widget/issues).
