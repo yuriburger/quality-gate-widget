@@ -15,3 +15,5 @@ To build and package it yourself:
 npm install
 npm run build
 ```
+
+For more information, check this blogpost: [](https://yuriburger.net/)
