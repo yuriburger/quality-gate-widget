@@ -7,7 +7,8 @@
   "description": "Widget to show the SonarQube Quality Gate status for a project",
   "publisher": "yuriburgernet",
   "galleryFlags": [
-    "Preview"
+    "Preview",
+    "Public"
   ],
   "icons": {
     "default": "static/images/logo.png"
