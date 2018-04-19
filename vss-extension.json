@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "qualitygatewidget",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "name": "Quality Gate Widget",
   "scopes": ["vso.work"],
   "description": "Widget to show the SonarQube Quality Gate status for a project",
