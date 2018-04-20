@@ -16,4 +16,4 @@ npm install
 npm run build
 ```
 
-For more information, check this blogpost: [](https://yuriburger.net/)
+For more information, check this blogpost: [A Quality Gate Dashboard for VSTS](https://yuriburger.net/2018/04/20/a-quality-gate-dashboard-widget-for-vsts/)
