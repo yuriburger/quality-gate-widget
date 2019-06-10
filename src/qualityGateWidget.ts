@@ -19,24 +19,33 @@ export class QualityGateWidget {
 
         // Extract settings from widgetSettings.customSettings and ask user to configure one if none is found
         let settings = JSON.parse(widgetSettings.customSettings.data);
-        if (!settings || !settings.projectKey || !settings.sonarUrl  ) {
+        if (!settings || !settings.projectKey || !settings.sonarUrl  || !settings.sonarApiKey) {
             $span.text("Sorry nothing to show, please configure the settings");
             $container.append($span);
             return this.WidgetHelpers.WidgetStatusHelper.Success();
         }
 
         try {
-            return $.getJSON( settings.sonarUrl + settings.projectKey, (data) => {
-                if (data.projectStatus.status === "OK") {
-                    $span.text("passed");
-                    $span.addClass("level levelOk");
+            // return $.getJSON( settings.sonarUrl + settings.projectKey, (data) => {
+            return $.ajax({
+                // beforeSend: function(request) {
+                //    request.setRequestHeader("Authorization", "Basic " + btoa(settings.sonarApiKey));
+                // },
+                headers: {"Authorization": "Basic " + btoa(settings.sonarApiKey + ":")},
+                dataType: "json",
+                url: settings.sonarUrl + settings.projectKey,
+                success: function(data) {
+                    if (data.projectStatus.status === "OK") {
+                        $span.text("passed");
+                        $span.addClass("level levelOk");
+                    }
+                    else {
+                        $span.text("failed");
+                        $span.addClass("level levelFailed");
+                    }
+                    $container.append($span);
+                    return this.WidgetHelpers.WidgetStatusHelper.Success();
                 }
-                else {
-                    $span.text("failed");
-                    $span.addClass("level levelFailed");
-                }
-                $container.append($span);
-                return this.WidgetHelpers.WidgetStatusHelper.Success();
             });
         } catch (e) {
             console.log(e);
