@@ -3,6 +3,7 @@ VSS.require("TFS/Dashboards/WidgetHelpers", function (WidgetHelpers) {
     VSS.register("QualityGateWidget-Configuration", function () {
         const $projectKey = $("#project-picker-input");
         const $sonarUrl = $("#sonar-url-input");
+        const $sonarApiKey = $("#sonar-api-key-input");
 
         return {
             load: function (widgetSettings, widgetConfigurationContext) {
@@ -12,7 +13,8 @@ VSS.require("TFS/Dashboards/WidgetHelpers", function (WidgetHelpers) {
                     const customSettings = {
                         data: JSON.stringify({
                             projectKey: $projectKey.val(),
-                            sonarUrl: $sonarUrl.val()
+                            sonarUrl: $sonarUrl.val(),
+                            sonarApiKey: $sonarApiKey.val()
                         })
                     };
                     const eventName = WidgetHelpers.WidgetEvent.ConfigurationChange;
@@ -27,11 +29,17 @@ VSS.require("TFS/Dashboards/WidgetHelpers", function (WidgetHelpers) {
                     if (settings.sonarUrl) {
                         $sonarUrl.val(settings.sonarUrl);
                     }
+                    if (settings.sonarApiKey) {
+                        $sonarApiKey.val(settings.sonarApiKey);
+                    }
                 }
                 $projectKey.on("change", function () {
                     configurationChange();
                 });
                 $sonarUrl.on("change", function () {
+                    configurationChange();
+                });
+                $sonarApiKey.on("change", function () {
                     configurationChange();
                 });
 
@@ -41,7 +49,8 @@ VSS.require("TFS/Dashboards/WidgetHelpers", function (WidgetHelpers) {
                 const customSettings = {
                     data: JSON.stringify({
                         projectKey: $projectKey.val(),
-                        sonarUrl: $sonarUrl.val()
+                        sonarUrl: $sonarUrl.val(),
+                        sonarApiKey: $sonarApiKey.val()
                     })
                 };
                 return WidgetHelpers.WidgetConfigurationSave.Valid(customSettings);
